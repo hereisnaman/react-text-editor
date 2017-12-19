@@ -1,0 +1,47 @@
+.toolbox {
+  font-size: 24px;
+  color: $dark-color;
+  width: 60vw;
+  margin-left: 20vw;
+  text-align: center;
+  height: 45px;
+  vertical-align: middle;
+  margin-top: 80px;
+  justify-content: space-between;
+  display: flex;
+
+  .tool-group {
+    display: inline;
+    border: 2px solid $light-color;
+    border-radius: 4px;
+    vertical-align: top;
+    background: $box-color;
+
+    .tool {
+      background: none;
+      border: none;
+      padding: 2px 20px;
+      font-weight: bold;
+      &:hover {
+        background: $bg-color;
+        border-bottom: 2px solid $dark-color;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .toolbox {
+    display: inline-block;
+    width: 100vw;
+    margin: 0;
+  }
+}

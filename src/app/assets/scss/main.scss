@@ -1,0 +1,18 @@
+@import "variables";
+@import "components/toolbox";
+@import "components/textbox";
+
+body {
+  background: $bg-color;
+}
+
+button, p {
+  outline: none;
+  &:hover, &:focus, &:active {
+    outline: none;
+  }
+}
+
+button {
+  cursor: pointer;
+}

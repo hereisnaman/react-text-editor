@@ -1,0 +1,22 @@
+.textbox {
+  width: 60vw;
+  margin-left: 20vw;
+  margin-top: 20px;
+  border: 2px solid $light-color;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 200;
+  padding: 20px 10px;
+  height: calc(100vh - 250px);
+  background: $box-color;
+  color: $normal-color;
+}
+
+@media (max-width: 767px) {
+  .textbox {
+    width: 100vw;
+    margin: 60px 0 0 0;
+    height: calc(100vh - 150px);
+  }
+
+}
