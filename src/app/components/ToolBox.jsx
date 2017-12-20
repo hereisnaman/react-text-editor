@@ -16,13 +16,12 @@ import {
 
 const handleClick = (e) => {
   e.preventDefault();
-  console.log(e);
   switch (e.target.id) {
     case 'heading':
-      document.execCommand('heading', true, 'H1');
+      document.execCommand('formatBlock', false, '<h1>');
       break;
     case 'quote':
-      document.execCommand('formatBlock', false, 'q');
+      document.execCommand('formatBlock', false, '<blockquote>');
       break;
     case 'bold':
       document.execCommand('bold');
@@ -86,8 +85,8 @@ class ToolBox extends React.Component {
 
         <div className="tool-group">
           {renderButton('cut', cut)}
-          {renderButton('paste', paste)}
           {renderButton('copy', copy)}
+          {renderButton('paste', paste)}
         </div>
       </div>
     );
