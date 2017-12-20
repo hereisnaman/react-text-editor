@@ -6,8 +6,8 @@ const save = (e) => {
   e.preventDefault();
   if (e.target.innerHTML === 'Start typing here') {
     e.target.innerHTML = '';
-  } else
-    storage.setObject('text', e.target.innerHTML);
+  }
+  storage.setObject('text', e.target.innerHTML);
 };
 
 class TextBox extends React.Component {
@@ -16,7 +16,7 @@ class TextBox extends React.Component {
     let storageData = JSON.stringify(storage.getObject('text'));
     storageData = storageData.substring(1, storageData.length - 1);
     this.state = {
-      text: storageData === '' || '<br>' ? 'Start typing here' : ReactHtmlParser(storageData)
+      text: storageData === '' || storageData === '<br>' ? 'Start typing here' : ReactHtmlParser(storageData)
     }
   }
 

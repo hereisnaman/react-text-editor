@@ -19,10 +19,10 @@ const handleClick = (e) => {
   console.log(e);
   switch (e.target.id) {
     case 'heading':
-      document.execCommand('heading');
+      document.execCommand('heading', true, 'H1');
       break;
     case 'quote':
-      document.execCommand('formatBlock');
+      document.execCommand('formatBlock', false, 'q');
       break;
     case 'bold':
       document.execCommand('bold');
